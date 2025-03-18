@@ -1,0 +1,255 @@
+/* Reset basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main Container Styling */
+.main-container {
+    font-family: 'Kantumruy Pro', sans-serif;
+    color: #fff;
+    background: linear-gradient(135deg, #024466, #1cbbd0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Header Section */
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    max-width: 150px;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #e0e0e0;
+}
+
+/* Payment Container */
+.payment-container {
+    background: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: rgba(255, 255, 255, 0.2);
+    margin-bottom: 30px;
+}
+
+/* Payment Form */
+.payment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Payment Input Fields */
+.payment-method,
+.payment-amount,
+.payee-name,
+.payee-account {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #1a1a1a; /* Darker background for contrast */
+    color: #ddd;
+    font-size: 1rem;
+    transition: all 0.3s ease; /* Smooth transition for all changes */
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2); /* Subtle inner shadow */
+}
+
+/* Hover Effect */
+.payment-method:hover,
+.payment-amount:hover,
+.payee-name:hover,
+.payee-account:hover {
+    background-color: #292929; /* Slightly lighter background on hover */
+    border-color: #666; /* Border color change on hover */
+}
+
+/* Focus Effect */
+.payment-method:focus,
+.payment-amount:focus,
+.payee-name:focus,
+.payee-account:focus {
+    outline: none;
+    background-color: #333; /* Darken background on focus */
+    border-color: #00aaff; /* Bright border color */
+    box-shadow: 0 0 10px rgba(0, 170, 255, 0.5); /* Blue glow effect */
+    animation: pulse 0.5s ease-out; /* Add pulse animation */
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 8px rgba(0, 170, 255, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(0, 170, 255, 0.7);
+    }
+    100% {
+        box-shadow: 0 0 8px rgba(0, 170, 255, 0.5);
+    }
+}
+
+/* Submit Button */
+.payment-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.payment-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Payment Result */
+.payment-result {
+    margin-top: 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #76ff03;
+}
+
+/* Transactions Section */
+.transactions-container {
+    background: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: rgba(255, 255, 255, 0.2);
+}
+
+.transaction-list {
+    font-size: 0.9rem;
+    color: #ffffff;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* Credit Card Options - with images */
+.credit-card-options {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.credit-card-option {
+    width: 40%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    box-shadow: rgba(255, 255, 255, 0.2);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.credit-card-option:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-4px);
+}
+
+.credit-card-option img {
+    width: 70%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.credit-card-option p {
+    font-size: 1.1rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Style for Select Box (payment method) */
+.payment-method-select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    background-color: #1a1a1a;
+    color: #ddd;
+    font-size: 1rem;
+    border: 1px solid #444;
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.payment-method-select:hover,
+.payment-method-select:focus {
+    background-color: #292929;
+    border-color: #666;
+}
+
+.payment-method-select:focus {
+    outline: none;
+    border-color: #00aaff;
+    box-shadow: 0 0 10px rgba(0, 170, 255, 0.5);
+}
+/* Credit Card Options - with images */
+.credit-card-options {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.credit-card-option {
+    width: 30%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    box-shadow: rgba(255, 255, 255, 0.2);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.credit-card-option:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-4px);
+}
+
+.credit-card-option input[type="radio"] {
+    display: none;
+}
+
+.credit-card-option label {
+    cursor: pointer;
+    display: block;
+}
+
+.credit-card-option img {
+    width: 70%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.credit-card-option p {
+    font-size: 1.1rem;
+    color: #fff;
+    font-weight: bold;
+}

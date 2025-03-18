@@ -1,0 +1,236 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    background: linear-gradient(135deg, #024466, #1cbbd0); /* Background with provided gradient */
+    color: white; /* Set all text to white */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: auto; /* Enable scrolling */
+    font-family: 'Kantumruy Pro', sans-serif;
+}
+
+/* Main Container */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    padding: 20px;
+    min-height: 100vh;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    text-align: center;
+}
+
+/* Header Section */
+.header {
+    margin-bottom: 0px;
+}
+
+.header .logo img {
+    max-width: 180px; /* Smaller logo for better balance */
+    object-fit: contain;
+    display: block;
+    margin:  auto;
+}
+
+/* ATM Card Image */
+.atm-card-image {
+    width: 80%;
+    margin: 20px 0;
+    animation: slideIn 2s ease-out, pulse 1.5s infinite alternate; /* Add pulse animation */
+}
+
+.atm-card-image img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Cash to ATM Section */
+.cash-to-atm-container {
+    width: 100%;
+    max-width: 350px; /* Smaller box */
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.2); /* Slightly darker glass effect */
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    margin-bottom: 50px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05); /* Slight scale up for pulse */
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* Title */
+.cash-to-atm-container h2 {
+    color: #ffffff;
+    font-size: 2.3em;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* Form Styling */
+.cash-to-atm-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-group {
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    display: block;
+    color: #fff;
+}
+
+.payment-amount,
+.payee-account,
+.payee-name,
+.payment-method {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent */
+    transition: background-color 0.3s ease, border 0.3s ease;
+    max-width: 300px; /* Shortened input width */
+    margin: 0 auto; /* Center inputs */
+}
+
+.payment-amount:focus,
+.payee-account:focus,
+.payee-name:focus,
+.payment-method:focus {
+    border-color: #19b3d3;
+    background-color: rgba(255, 255, 255, 1); /* Full opaque on focus */
+}
+
+/* Submit Button Styling */
+.submit-btn {
+    padding: 14px;
+    background: linear-gradient(135deg, #024466, #1cbbd0);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    max-width: 300px; /* Match button width to inputs */
+    margin: 0 auto; /* Center the button */
+}
+
+.submit-btn:hover {
+    background-color: #17a1c1;
+    transform: translateY(-4px);
+}
+
+/* Animations */
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .atm-card-image img {
+        max-width: 100%;
+    }
+
+    .cash-to-atm-container {
+        padding: 15px;
+        max-width: 90%;
+    }
+
+    .submit-btn {
+        font-size: 1.1em;
+        padding: 12px;
+    }
+
+    .payment-amount,
+    .payee-account,
+    .payee-name,
+    .payment-method {
+        font-size: 1em;
+        padding: 12px;
+        max-width: 100%; /* Full width for smaller screens */
+    }
+
+    .cash-to-atm-container h2 {
+        font-size: 2em;
+    }
+}
+
+/* Smaller devices like phones in portrait mode */
+@media (max-width: 480px) {
+    .atm-card-image img {
+        max-width: 100%;
+    }
+
+    .header .logo img {
+        max-width: 150px; /* Further reduce logo size for very small screens */
+    }
+
+    .payment-amount,
+    .payee-account,
+    .payee-name,
+    .payment-method {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+
+    .submit-btn {
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    .cash-to-atm-container h2 {
+        font-size: 1.7em;
+    }
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>ការប្ដូរប្រាក់</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/exchange.css">
+</head>
+<body>
+
+    <!-- Main Container -->
+    <div class="main-container">
+
+        <!-- Logo Section -->
+        <header class="header">
+            <div class="logo">
+                <img src="../image/logowhite.png" alt="Logo">
+            </div>
+        </header>
+
+        <!-- Currency Exchange Section -->
+        <section class="exchange-container">
+            <h2 class="section-title">ការប្ដូរប្រាក់</h2>
+
+            <form class="exchange-form">
+                <select class="currency-select" id="fromCurrency">
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="KHR">KHR</option>
+                    <option value="GBP">GBP</option>
+                </select>
+
+                <input type="number" class="currency-input" id="amount" placeholder="បញ្ចូលចំនួនប្រាក់" required>
+
+                <select class="currency-select" id="toCurrency">
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="KHR">KHR</option>
+                    <option value="GBP">GBP</option>
+                </select>
+
+                <button type="submit" class="exchange-btn">ប្ដូរ</button>
+            </form>
+
+            <div class="exchange-result">
+                <p id="resultText">លទ្ធផលការប្ដូរប្រាក់នឹងបង្ហាញនៅទីនេះ</p>
+            </div>
+        </section>
+
+        <!-- Live Currency Chart Section -->
+        <section class="chart-container">
+            <h2 class="section-title">ចរន្តសាច់ប្រាក់ពិភពលោក</h2>
+
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <div class="tradingview-widget-copyright">
+                    <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
+                        <span class="blue-text">តាមដានទីផ្សារទាំងអស់នៅលើ TradingView</span>
+                    </a>
+                </div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+                {
+                    "symbols"= [
+                        {
+                            "proName": "FOREXCOM:SPXUSD",
+                            "title": "S&P 500 Index"
+                        },
+                        {
+                            "proName": "FOREXCOM:NSXUSD",
+                            "title": "US 100 Cash CFD"
+                        },
+                        {
+                            "proName": "FX_IDC:EURUSD",
+                            "title": "EUR ទៅ USD"
+                        },
+                        {
+                            "proName": "BITSTAMP:BTCUSD",
+                            "title": "Bitcoin"
+                        },
+                        {
+                            "proName": "BITSTAMP:ETHUSD",
+                            "title": "Ethereum"
+                        },
+                        {
+                            "description": "អង់គ្លេស",
+                            "proName": "FX:GBPUSD"
+                        },
+                        {
+                            "description": "ជប៉ុន",
+                            "proName": "OANDA:GBPJPY"
+                        },
+                        {
+                            "description": "ចិន",
+                            "proName": "PEPPERSTONE:USDCNH"
+                        },
+                        {
+                            "description": "អាមេរិកា",
+                            "proName": "TVC:VIX"
+                        },
+                        {
+                            "description": "វៀតណាម",
+                            "proName": "FX_IDC:VNDUSD"
+                        },
+                        {
+                            "description": "សិង្ហបុរី",
+                            "proName": "SAXO:SGDCNH"
+                        },
+                        {
+                            "description": "ថៃ",
+                            "proName": "FOREXCOM:USDTHB"
+                        },
+                        {
+                            "description": "កម្ពុជា",
+                            "proName": "FX_IDC:KHRUSD"
+                        },
+                        {
+                            "description": "ឥណ្ឌូនេស៊ី",
+                            "proName": "FX_IDC:IDREUR"
+                        }
+                    ],
+                    "showSymbolLogo"= true;
+                    "isTransparent"= false;
+                    "displayMode"= "adaptive",
+                    "colorTheme"= "dark",
+                    "locale"= "km"
+                }
+                </script>
+            </div>
+            <!-- TradingView Widget END -->
+        </section>
+        <script src="../javascript/exchange.js"></script>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ការទូទាត់</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/payment.css">
+</head>
+<body>
+
+    <!-- Main Container -->
+    <div class="main-container">
+
+        <!-- Logo Section -->
+        <header class="header">
+            <div class="logo">
+                <img src="../image/logowhite.png" alt="ស្លាក">
+            </div>
+        </header>
+
+        <!-- Payment Section -->
+        <section class="payment-container">
+            <h2 class="section-title">ការទូទាត់</h2>
+            
+            <!-- Payment Form -->
+            <form class="payment-form">
+                
+                <!-- Payment Method Selection with Images -->
+                <div class="payment-method-container">
+                    <h3>ជ្រើសរើសវិធីទូទាត់ :</h3>
+                    <div class="credit-card-options">
+                        <div class="credit-card-option">
+                            <input type="radio" id="creditCardVisa" name="paymentMethod" value="Visa">
+                            <label for="creditCardVisa">
+                                <img src="../image/visa.png" alt="ការប្រាក់វីសា">
+                                <p>Visa</p>
+                            </label>
+                        </div>
+                        <div class="credit-card-option">
+                            <input type="radio" id="creditCardMastercard" name="paymentMethod" value="Mastercard">
+                            <label for="creditCardMastercard">
+                                <img src="../image/mastercard.png" alt="ការប្រាក់ម៉ាស្ទាកាត">
+                                <p>Master</p>
+                            </label>
+                        </div>
+                        <div class="credit-card-option">
+                            <input type="radio" id="creditCardAmex" name="paymentMethod" value="American Express">
+                            <label for="creditCardAmex">
+                                <img src="../image/unionpay.png" alt="ការប្រាក់អាមេកានអិចស្បេរ">
+                                <p>Union Pay</p>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Amount Input -->
+                <input type="number" class="payment-amount" id="paymentAmount" placeholder="បញ្ចូលចំនួនប្រាក់" required>
+
+                <!-- Payee Details -->
+                <input type="text" class="payee-name" id="payeeName" placeholder="ឈ្មោះអ្នកទទួល" required>
+                <input type="text" class="payee-account" id="payeeAccount" placeholder="លេខគណនី" required>
+
+                <!-- Submit Button -->
+                <button type="submit" class="payment-btn">ដាក់ស្នើការទូទាត់</button>
+            </form>
+
+            <!-- Payment Result -->
+            <div class="payment-result">
+                <p id="resultText">ស្ថានភាពបង់ប្រាក់នឹងបង្ហាញនៅទីនេះ</p>
+            </div>
+        </section>
+
+        <!-- Recent Transactions Section -->
+        <section class="transactions-container">
+            <h2 class="section-title">ប្រតិបត្តិការមុនៗ</h2>
+
+            <div class="transaction-list">
+                <p>ប្រវត្ដិប្រតិបត្តិការ​នឹង​បង្ហាញនៅទីនេះ</p>
+            </div>
+        </section>
+
+        <script src="../javascript/payment.js"></script>
+    </div>
+
+</body>
+</html>

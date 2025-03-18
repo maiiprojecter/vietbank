@@ -1,0 +1,170 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kantumruy Pro', sans-serif;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(135deg, #024466, #1cbbd0);
+    color: white;
+}
+
+.header .logo img {
+    width: 150px; /* Adjust the size of the logo */
+    height: 50px;
+}
+
+.header-icons img {
+    width: 30px; /* Icon size */
+    height: 30px;
+    margin-left: 20px; /* Space between icons */
+}
+
+
+/* Animation on hover */
+.header-icons img:hover {
+    transform: scale(1.2); /* Increase size by 20% */
+    opacity: 0.8; /* Slightly reduce opacity */
+}
+
+/* Grid Container */
+/* Grid Container */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Adjust the number of columns */
+    gap: 10px;
+    padding: 20px;
+    background: linear-gradient(135deg, #024466, #066c7a, #570c89, #00b3b3, #3c00ff); /* Added new sand color */
+    background-size: 600% 600%; /* Larger size for even smoother movement */
+    animation: gradientAnimation 20s ease infinite; /* Longer duration for a seamless flow */
+}
+
+/* Keyframes for moving gradient (wind-like, mixed effect) */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 0%;  /* Start from top-left */
+    }
+    25% {
+        background-position: 50% 50%; /* Shift position */
+    }
+    50% {
+        background-position: 100% 100%; /* Further shift for mixing */
+    }
+    75% {
+        background-position: 50% 0%; /* Reverses position smoothly */
+    }
+    100% {
+        background-position: 0% 0%;  /* End back to start */
+    }
+}
+
+/* Grid Item */
+.grid-item {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white for glass effect */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column; /* Align icon and text vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    
+    /* Glass effect */
+    backdrop-filter: blur(10px); /* Blurs background behind the element */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Light border to enhance glass look */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.grid-item:hover {
+    transform: scale(1.05); /* Slight scale on hover for interactivity */
+    background: rgba(255, 255, 255, 0.15); /* Slightly increase transparency on hover */
+}
+
+
+/* Link Style */
+.grid-item a {
+    color: white; /* Make link text white */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Icon Style */
+.grid-item img {
+    width: 60px; /* Icon size */
+    height: 60px; /* Icon size */
+    margin: 10px; /* Add space between icon and text */
+    transition: transform 0.3s ease; /* Apply transition on transform */
+}
+
+/* Hover Effect on Icon */
+.grid-item:hover img {
+    transform: scale(1.1); /* Enlarge icon when hovering */
+}
+
+/* Hover Effect on Grid Item */
+.grid-item:hover {
+    background-color: #1cbbd0;
+}
+
+
+/* Quick Actions Section */
+.quick-actions {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
+}
+
+.quick-transfer,
+.quick-payment {
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+}
+
+.quick-transfer {
+    background-color: #19b3d3;
+}
+
+.quick-payment {
+    background-color: #e94d65;
+}
+
+.quick-transfer h2,
+.quick-payment h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* Banner Styles */
+.banner-container {
+    width: auto;
+    height: 200px; /* Adjust the height of the banner */
+    overflow: hidden; /* Hide overflowing content */
+    position: relative;
+}
+
+.banner-images {
+    display: flex;
+    width: 500%; /* Since we have 5 images */
+    transition: transform 1s ease-in-out; /* Add smooth scrolling effect */
+}
+
+.banner-images img {
+    width: 40%; /* Each image takes 20% of the container width */
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}

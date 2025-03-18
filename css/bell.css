@@ -1,0 +1,160 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    background: linear-gradient(135deg, #024466, #1cbbd0);
+    font-family: 'Kantumruy Pro', sans-serif;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    padding: 20px;
+}
+
+/* Header Section */
+header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+header .logo img {
+    width: 150px;
+    height: 50px;
+    object-fit: contain;
+}
+
+/* TradingView Widget Container */
+.tradingview-widget-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 450px;
+    margin: 50px auto 0;
+    background: linear-gradient(135deg, rgba(2, 68, 102, 0.8), rgba(28, 187, 208, 0.8))
+}
+
+/* Widget Styling */
+.tradingview-widget-container__widget {
+    width: 100%;
+    height: 550px; /* Set default height for widget */
+    border-radius: 10px;
+}
+
+/* Widget Copyright Section */
+.tradingview-widget-copyright {
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+.tradingview-widget-copyright a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.tradingview-widget-copyright a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .tradingview-widget-container {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .tradingview-widget-container__widget {
+        height: 400px; /* Adjust height for smaller screens */
+    }
+}
+
+/* Notifications Container */
+.notifications-container {
+    background: linear-gradient(135deg, #024466, #1cbbd0);
+    max-width: 600px;
+    max-height: 70vh; /* Limit container height */
+    overflow-y: auto; /* Enable scrolling */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    margin-top: 100px; /* Space between logo and notifications */
+}
+
+.notifications-container h1 {
+    font-size: 2.2em;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Individual Notification */
+.notification {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.notification:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.notification .text {
+    display: flex;
+    flex-direction: column;
+}
+
+.notification h2 {
+    font-size: 1.4em;
+    color: red; /* Change color of h2 to red */
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.notification p {
+    font-size: 1em;
+    color: #555;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.notification-time {
+    font-size: 0.9em;
+    color: #888;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Mobile Responsiveness for Notifications */
+@media (max-width: 768px) {
+    .notifications-container {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    .notification h2 {
+        font-size: 1.2em;
+    }
+
+    .notification p {
+        font-size: 0.95em;
+    }
+}

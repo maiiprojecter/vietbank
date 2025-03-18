@@ -1,0 +1,381 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kantumruy Pro', sans-serif;
+}
+
+/* Global Styles */
+body {
+    background: linear-gradient(135deg, rgba(2, 68, 102, 0.8), rgba(28, 187, 208, 0.8)), url('../image/background.jpg');
+    background-size: cover;
+    background-position: center center;
+    color: #333;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    margin-bottom: 20px;
+}
+header .logo img {
+    width: 250px;  /* Increased width */
+    height: 350px;  /* Keep aspect ratio */
+    object-fit: contain;
+}
+
+
+/* Profile Container */
+.profile-container {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.4); /* Light background for better text contrast */
+}
+
+/* Profile Header and Avatar */
+.profile-header {
+    margin: 20px 0 10px;
+}
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    margin-bottom: 10px;
+    animation: pulse 1.5s infinite;
+}
+.profile-header h2 {
+    font-size: 1.6em;
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+/* Mastercard Style Account Balance Card */
+.balance-card {
+    width: 100%;
+    max-width: 350px;
+    padding: 20px;
+    margin: 15px auto;
+    border-radius: 15px;
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    position: relative;
+    text-align: left;
+    overflow: hidden;
+    animation: gradientAnimation 8s ease infinite;
+}
+.balance-card .card-logo {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    opacity: 0.9;
+}
+.balance-card .balance-title {
+    font-size: 1.1em;
+    margin-bottom: 12px;
+    color: #d4dfe6;
+}
+.balance-card .balance-amount {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+.balance-card .balance-details {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+.balance-card .balance-details div {
+    text-align: center;
+    font-size: 1em;
+    color: #ffffff;
+}
+
+/* Total Balance Overview Section */
+.total-balance-overview h3 {
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+.total-balance-overview canvas {
+    max-width: 100%;
+    margin: 10px auto;
+}
+
+/* Animations */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .profile-avatar {
+        width: 100px;
+        height: 100px;
+    }
+    .profile-header h2 {
+        font-size: 1.4em;
+    }
+    .balance-card {
+        padding: 15px;
+    }
+    .balance-card .balance-title,
+    .balance-card .balance-amount {
+        font-size: 1.4em;
+    }
+    header .logo img {
+        width: 120px;
+    }
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kantumruy Pro', sans-serif;
+}
+
+/* Global Styles */
+body {
+    background: linear-gradient(135deg, rgba(2, 68, 102, 0.8), rgba(28, 187, 208, 0.8)), url('../image/background.jpg');
+    background-size: cover;
+    background-position: center center;
+    color: #333;
+    height: auto; /* Allow content to expand */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 10px;
+    overflow-y: scroll; /* Enable scrolling */
+}
+
+/* Header Styles */
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Ensure the logo stays centered */
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+header .logo {
+    flex-shrink: 0; /* Prevent shrinking of the logo */
+    width: 100%; /* Allow it to take the full width of the container */
+}
+
+header .logo img {
+    width: 180px; /* You can increase this value to make it larger */
+    max-width: 100%; /* Ensure it does not exceed 100% of the container */
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* Profile Container */
+.profile-container {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    background: transparent; /* Remove background color */
+}
+
+/* Profile Header and Avatar */
+.profile-header {
+    margin: 20px 0 10px;
+}
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    margin-bottom: 10px;
+    animation: pulse 1.5s infinite;
+}
+.profile-header h2 {
+    font-size: 1.6em;
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+/* Mastercard Style Account Balance Card */
+.balance-card {
+    width: 100%;
+    max-width: 350px;
+    padding: 20px;
+    margin: 15px auto;
+    border-radius: 15px;
+    color: white;
+    background: linear-gradient(135deg, #3c00ff, #ff005d); /* Static gradient as fallback */
+    background-size: 400% 400%; /* Make the gradient larger for animation */
+    animation: gradientAnimation 8s ease infinite;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    position: relative;
+    text-align: left;
+    overflow: hidden;
+}
+
+/* Animated Gradient Effect */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Card Logo */
+.balance-card .card-logo {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    opacity: 0.9;
+}
+
+/* Balance Title */
+.balance-card .balance-title {
+    font-size: 1.1em;
+    margin-bottom: 12px;
+    color: #d4dfe6;
+}
+
+/* Balance Amount */
+.balance-card .balance-amount {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+/* Balance Details */
+.balance-card .balance-details {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.balance-card .balance-details div {
+    text-align: center;
+    font-size: 1em;
+    color: #ffffff;
+}
+
+
+/* Total Balance Overview Section */
+.total-balance-overview h3 {
+    margin-bottom: 30px;
+    font-size:25px;
+    color: #ffffff;
+}
+.total-balance-overview canvas {
+    max-width: 100%;
+    margin: 10px auto;
+}
+
+/* Animations */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.tradingview-widget-custom {
+    width: 100%; /* Full width for responsiveness */
+    max-width: 550px; /* Maximum width */
+    height: 400px; /* Fixed height */
+    margin: 0 auto; /* Center alignment */
+}
+
+/* World Balance Section Styling */
+.world-balance-widget {
+    margin: 20px 0;
+    padding: 15px;
+    
+    border-radius: 10px;
+
+    text-align: center;
+}
+
+.world-balance-widget h3 {
+    font-family: 'Kantumruy Pro', sans-serif;
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.tradingview-widget-container {
+    width: 100%;
+    max-width: 500px; /* Set max width for the widget */
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tradingview-widget-container__widget {
+    height: 350px; /* Fixed height for the widget content */
+}
+
+.tradingview-widget-container a {
+    color: #00bfff; /* Color for TradingView link text */
+    text-decoration: none;
+}
+
+.tradingview-widget-container a:hover {
+    text-decoration: underline;
+}
